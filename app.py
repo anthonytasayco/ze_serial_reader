@@ -110,7 +110,7 @@ class GroupClass(QGroupBox):
                     if answer >= specific_number:
                         self.desc.setText("Peso: {} kg\n".format(str(answer)))
                         # send weight to endpoint
-                        endpoint = "https://hackaton-app-adb544603f0d.herokuapp.com/measure_weight?weight=%s" % str(answer)
+                        endpoint = "https://hackaton-app-adb544603f0d.herokuapp.com/measure_weight?weight=%s" % str(round(answer, 4))
                         print(endpoint, 'ENDPOINT')
                         requests.get(endpoint)
                         # end proccess
